@@ -82,7 +82,7 @@ class ResponsiveScreenBuilder extends StatelessWidget {
     );
   }
 
-  static WidgetBuilder? _builderOrNull(Widget? widget) {
+  /*static WidgetBuilder? _builderOrNull(Widget? widget) {
     return widget == null ? null : ((_) => widget);
-  }
+  }*/
 }

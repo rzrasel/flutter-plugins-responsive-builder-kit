@@ -1,5 +1,3 @@
-library responsive_layout_builder;
-
 export 'src/type/device_screen_type.dart';
 export 'src/type/orientation_layout_type.dart';
 export 'src/type/refined_size.dart';

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import '../../responsive_builder_kit.dart';
-import '../core/responsive_breakpoints.dart';
-import '../type/device_screen_type.dart';
 
 /// Helper for responsive layout detection and initialization.
 ///
@@ -20,13 +18,6 @@ class ResponsiveLayoutHelper {
   /// Cached [Orientation] after calling [init].
   static Orientation? orientation;
 
-  static const ScreenBreakpoints _breakpoints = ScreenBreakpoints(
-    desktop: 900,
-    tablet: 650,
-    mobile: 650,
-    watch: 250,
-  );
-
   /// Initializes cached screen data from [context].
   ///
   /// Call this in your app's root (e.g., [MaterialApp] builder) for static access.
@@ -36,9 +27,7 @@ class ResponsiveLayoutHelper {
     screenHeight = _mediaQueryData.size.height;
     orientation = _mediaQueryData.orientation;
 
-    deviceType = getDeviceType();  // Now relies on global screenWidth
-
-    // Removed unused late vars (dead code)
+    deviceType = getDeviceType();
   }
 
   /// Checks if screen is desktop-sized.

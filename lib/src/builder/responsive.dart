@@ -7,6 +7,21 @@ class Responsive {
   static bool _init = false;
   static late DeviceBreakpoints _breakpoints;
 
+  /// Initializes the [Responsive] utility with the given [context] and optional [breakpoints].
+  ///
+  /// Call this method once early in your app lifecycle (e.g., inside [MaterialApp.builder]
+  /// or a top-level widget's [build] method) to cache breakpoints and enable detection.
+  /// Throws an [AssertionError] if called without a valid [context].
+  ///
+  /// Example:
+  /// ```dart
+  /// Responsive.init(
+  ///   context: context,
+  ///   breakpoints: DeviceBreakpoints(
+  ///     desktop: DeviceBreakpointRange(min: 1000, max: double.infinity),
+  ///   ),
+  /// );
+  /// ```
   static void init({
     required BuildContext context,
     DeviceBreakpoints breakpoints = const DeviceBreakpoints(),

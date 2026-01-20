@@ -98,7 +98,7 @@ if(ResponsiveLayoutHelper.isDesktop(context)) {
 
 ### ✅ With breakpoint
 
-```
+```dart
 if(ResponsiveLayoutHelper.isDesktop(context, minWidth: 900)) {
   debugPrint("Desktop mode 2");
 } else if(ResponsiveLayoutHelper.isTablet(context, minWidth: 650, maxWidth: 900)) {
